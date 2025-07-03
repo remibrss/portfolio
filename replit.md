@@ -1,8 +1,8 @@
-# Portfolio Website - Dylan Chau
+# Portfolio Website - Remi BEARS
 
 ## Overview
 
-This is a personal portfolio website for Dylan Chau, a 20-year-old IT technician passionate about new technologies, sports, and automobiles. The application is built as a static HTML/CSS/JavaScript website using Bootstrap for responsive design and modern styling.
+This is a personal portfolio website for Remi BEARS, a 20-year-old IT technician passionate about new technologies, sports, and automobiles. The application is built as a static HTML/CSS/JavaScript website using Bootstrap for responsive design and modern styling.
 
 ## System Architecture
 
@@ -90,6 +90,7 @@ This is a personal portfolio website for Dylan Chau, a 20-year-old IT technician
 ```
 Changelog:
 - July 03, 2025. Initial setup
+- July 03, 2025. Updated all references from "Dylan Chau" to "Remi BEARS" across all HTML files
 ```
 
 ## User Preferences
