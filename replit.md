@@ -2,90 +2,88 @@
 
 ## Overview
 
-This is a personal portfolio website for Dylan Chau, a 20-year-old IT technician passionate about new technologies, sports, and automobiles. The application is built as a modern full-stack web application using React for the frontend and Express.js for the backend, with a PostgreSQL database using Drizzle ORM.
+This is a personal portfolio website for Dylan Chau, a 20-year-old IT technician passionate about new technologies, sports, and automobiles. The application is built as a static HTML/CSS/JavaScript website using Bootstrap for responsive design and modern styling.
 
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Styling**: Tailwind CSS with custom design system
-- **UI Components**: Radix UI primitives with shadcn/ui components
-- **Routing**: Wouter for client-side routing
-- **State Management**: TanStack Query for server state management
-- **Animations**: Framer Motion for smooth animations
-- **Build Tool**: Vite for development and build processes
+- **Framework**: Static HTML5 with modern CSS3 and JavaScript
+- **Styling**: Bootstrap 5.3 with custom CSS design system
+- **Icons**: Bootstrap Icons for consistent iconography
+- **Typography**: Google Fonts (Poppins) for modern typography
+- **Animations**: Custom CSS animations and JavaScript interactions
+- **Responsive Design**: Mobile-first Bootstrap grid system
 
-### Backend Architecture
-- **Framework**: Express.js with TypeScript
-- **Database**: PostgreSQL with Drizzle ORM
-- **Database Provider**: Neon Database (serverless PostgreSQL)
-- **Session Management**: PostgreSQL-based session storage
-- **Development**: Hot module replacement with Vite integration
+### Page Structure
+- **index.html**: Main landing page with all sections (home, about, skills, education, contact)
+- **realisations.html**: Professional projects and achievements page for BTS SIO SISR
+- **veille.html**: Technology watch and industry insights page
+- **css/style.css**: Custom styling with animations and responsive design
+- **js/script.js**: Interactive functionality and smooth scrolling
 
-### Key Components
+### Key Sections
 
-#### Database Schema
-- **portfolio_data**: Personal information (name, title, description, contact details)
-- **education**: Educational background with institutions and periods
-- **skills**: Technical skills with proficiency percentages and icons
-- **certifications**: Professional certifications with images and links
-- **users**: User authentication system (username/password)
+#### Main Portfolio (index.html)
+- **Navigation**: Fixed Bootstrap navbar with smooth scrolling
+- **Hero Section**: Animated introduction with profile image and call-to-action
+- **About Section**: Personal description with professional information
+- **Skills Section**: Technical competencies with animated progress bars
+- **Education Timeline**: Academic journey with visual timeline
+- **Contact Section**: Professional contact information and social links
 
-#### Frontend Components
-- **Navigation**: Fixed navigation with smooth scrolling
-- **Hero Section**: Main landing section with animated introduction
-- **About Section**: Personal description with call-to-action buttons
-- **Education Section**: Timeline-based educational journey
-- **Skills Section**: Interactive skill showcase with progress indicators
-- **Certifications Section**: Certificate gallery with external links
-- **Footer**: Contact information and social media links
+#### Professional Projects (realisations.html)
+- **Network Infrastructure**: Cisco configuration and VLAN implementation
+- **Virtualization**: VMware and Hyper-V infrastructure deployment
+- **Security Audit**: SI security assessment and GDPR compliance
+- **GLPI Implementation**: IT asset management and helpdesk solution
+- **Certifications**: Professional certificates and achievements
 
-#### Storage Layer
-- **Database Storage**: PostgreSQL with Drizzle ORM for production
-- **Memory Storage**: In-memory fallback for development/testing
-- **Interface Pattern**: IStorage interface for storage abstraction
+#### Technology Watch (veille.html)
+- **Monitoring Sources**: Curated list of technology information sources
+- **Industry Articles**: Recent developments in IT infrastructure
+- **Analysis & Synthesis**: Personal insights on technology trends
+- **Tools & Methods**: Veille methodology and organization tools
 
-## Data Flow
+## Features & Functionality
 
-1. **Frontend Request**: React components make API calls using TanStack Query
-2. **Backend Processing**: Express.js routes handle API requests
-3. **Database Operations**: Storage interface abstracts database operations
-4. **Response Handling**: JSON responses with proper error handling
-5. **UI Updates**: React components update based on query results
+### Interactive Elements
+1. **Smooth Scrolling**: JavaScript-powered navigation between sections
+2. **Animated Progress Bars**: Skills section with animated percentage displays
+3. **Responsive Design**: Mobile-first approach with Bootstrap grid system
+4. **Loading Animations**: Intersection Observer API for scroll-triggered animations
+5. **Interactive Navigation**: Active section highlighting and mobile menu
+
+### Educational Focus (BTS SIO SISR)
+- **Professional Projects**: Real-world infrastructure and networking projects
+- **Technology Watch**: Industry insights and trend analysis
+- **Technical Skills**: Focus on system administration and network management
+- **Certifications**: Security and compliance certifications (CNIL, ANSSI, DRSD)
 
 ## External Dependencies
 
 ### Core Dependencies
-- **@neondatabase/serverless**: Serverless PostgreSQL driver
-- **drizzle-orm**: TypeScript-first ORM
-- **@radix-ui/***: Headless UI components
-- **@tanstack/react-query**: Server state management
-- **framer-motion**: Animation library
-- **wouter**: Lightweight routing
+- **Bootstrap 5.3**: Responsive CSS framework
+- **Bootstrap Icons**: Consistent iconography
+- **Google Fonts (Poppins)**: Modern typography
+- **Unsplash Images**: Professional photography for visual appeal
 
-### Development Dependencies
-- **Vite**: Build tool and development server
-- **TypeScript**: Type safety
-- **Tailwind CSS**: Utility-first CSS framework
-- **ESBuild**: Fast JavaScript bundler
+### Development Features
+- **Vanilla JavaScript**: No framework dependencies for better performance
+- **CSS3 Animations**: Keyframe animations and transitions
+- **Modern HTML5**: Semantic markup and accessibility features
 
 ## Deployment Strategy
 
-### Build Process
-1. **Frontend Build**: Vite builds React application to `dist/public`
-2. **Backend Build**: ESBuild bundles Express server to `dist/index.js`
-3. **Database Migration**: Drizzle Kit handles schema migrations
+### Static Hosting
+- **File Structure**: Self-contained HTML/CSS/JS files
+- **Asset Management**: Local images and external CDN resources
+- **Performance**: Optimized images and minified resources
+- **SEO**: Meta tags, structured data, and semantic HTML
 
-### Environment Configuration
-- **Development**: Uses Vite dev server with HMR
-- **Production**: Serves static files from Express server
-- **Database**: Requires `DATABASE_URL` environment variable
-
-### Scripts
-- `dev`: Start development server with hot reload
-- `build`: Build both frontend and backend for production
-- `start`: Start production server
-- `db:push`: Push database schema changes
+### Browser Support
+- **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
+- **Mobile Responsive**: iOS Safari, Chrome Mobile
+- **Progressive Enhancement**: Core functionality without JavaScript
 
 ## Changelog
 
