@@ -91,6 +91,10 @@ This is a personal portfolio website for Remi BEARS, a 20-year-old IT technician
 Changelog:
 - July 03, 2025. Initial setup
 - July 03, 2025. Updated all references from "Dylan Chau" to "Remi BEARS" across all HTML files
+- July 03, 2025. Updated skills section with new technical competencies and percentages
+- July 03, 2025. Fixed progress bar animation issue (bars no longer "discharge")
+- July 03, 2025. Removed all Burger King references, updated status to "recherche d'alternance"
+- July 03, 2025. Updated contact email to "bearsremi@gmail.com" and location to "Nice, France"
 ```
 
 ## User Preferences
