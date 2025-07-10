@@ -1,3 +1,7 @@
+/* Désactive l'animation de remplissage des barres de progression Bootstrap */
+.progress-bar {
+  transition: none !important;
+}
 /* Global Styles */
 * {
     margin: 0;
@@ -64,8 +68,8 @@ body {
 }
 
 .profile-img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border: 5px solid #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -159,7 +163,6 @@ body {
 
 .progress-bar {
     border-radius: 5px;
-    transition: width 2s ease-in-out;
 }
 
 /* Timeline */

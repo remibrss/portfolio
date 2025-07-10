@@ -45,29 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animate progress bars when they come into view (only once)
-    const progressBars = document.querySelectorAll('.progress-bar');
-    const animatedBars = new Set();
-    
-    const animateProgressBars = () => {
-        progressBars.forEach(bar => {
-            const rect = bar.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            // Only animate if not already animated and is visible
-            if (rect.top < windowHeight && rect.bottom > 0 && !animatedBars.has(bar)) {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                bar.style.transition = 'width 1.5s ease-in-out';
-                
-                setTimeout(() => {
-                    bar.style.width = width;
-                    animatedBars.add(bar); // Mark as animated
-                }, 200);
-            }
-        });
-    };
-    
     // Animate on load
     setTimeout(animateProgressBars, 1000);
     
