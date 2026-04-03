@@ -10,8 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Design Tokens (must load first) -->
+    <link rel="stylesheet" href="css/tokens.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Hero Fix (MUST load last) -->
+    <link rel="stylesheet" href="css/hero-fix.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -46,6 +50,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-light ms-2" aria-label="Toggle theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,6 +62,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
+        <div id="particles-js"></div>
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
@@ -92,48 +102,52 @@
     <!-- About Section -->
     <section id="about" class="py-5 bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">À propos de moi</h2>
-                    <div class="section-divider"></div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <div class="section-divider"></div>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="about-image">
+                        <img src="assets/img/about-me.jpg" alt="Remi BEARS" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-7">
                     <div class="about-content">
-                        <h3 class="mb-4">Technicien Informatique - BTS SIO SISR</h3>
-                        <p class="mb-4">
-                            Je me présente, Remi BEARS, technicien informatique âgé de 20 ans passionné par les nouvelles technologies, 
-                            le sport et l'automobile. Je suis actuellement étudiant en BTS SIO SISR (Solutions d'Infrastructure, 
-                            Systèmes et Réseaux) en recherche d'alternance.
+                        <h3 class="mb-3">
+                            <span class="text-primary">Remi BEARS</span> — Administrateur Réseaux Junior
+                        </h3>
+                        <p class="lead text-muted mb-4">
+                            Étudiant en BTS SIO SISR, passionné par les nouvelles technologies, le sport et les jeux vidéos.
                         </p>
                         <p class="mb-4">
                             Ma formation me permet d'acquérir des compétences solides dans l'administration système, 
                             la gestion des réseaux et la sécurité informatique. J'aime particulièrement travailler sur 
                             des projets concrets qui me permettent d'appliquer mes connaissances théoriques.
                         </p>
-                        <div class="about-info">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled">
-                                        <li><strong>Âge:</strong> 20 ans</li>
-                                        <li><strong>Formation:</strong> BTS SIO SISR</li>
-                                        <li><strong>Statut:</strong> Recherche d'alternance</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled">
-                                        <li><strong>Spécialité:</strong> Infrastructure & Réseaux</li>
-                                        <li><strong>Localisation:</strong> Nice, France</li>
-                                    </ul>
-                                </div>
+                        <div class="row mb-4">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Âge :</strong> 20 ans</li>
+                                    <li class="mb-2"><strong>Formation :</strong> BTS SIO SISR</li>
+                                    <li class="mb-2"><strong>Localisation :</strong> Nice, France</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Spécialité :</strong> Infrastructure & Réseaux</li>
+                                    <li class="mb-2"><strong>Statut :</strong> Recherche d'alternance</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="assets/img/about-me.jpg" alt="Remi BEARS au travail" class="img-fluid rounded shadow">
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="bi bi-envelope me-2"></i>Me contacter
+                            </a>
+                            <a href="assets/CV_Remi_BEARS.pdf" class="btn btn-outline-primary" target="_blank">
+                                <i class="bi bi-download me-2"></i>Télécharger CV
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,11 +157,9 @@
     <!-- Skills Section -->
     <section id="skills" class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Mes Compétences</h2>
-                    <div class="section-divider"></div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Mes Compétences</h2>
+                <div class="section-divider"></div>
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-4">
@@ -223,11 +235,9 @@
     <!-- Education Section -->
     <section id="education" class="py-5 bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Mon Parcours Scolaire</h2>
-                    <div class="section-divider"></div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Mon Parcours Scolaire</h2>
+                <div class="section-divider"></div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -243,7 +253,7 @@
                                             </div>
                                             <div class="col-md-9">
                                                 <h4 class="card-title">BTS SIO (option SISR) - Mediaschool IRIS, Nice</h4>
-                                                <h6 class="card-subtitle mb-2 text-muted">2024 - 2025</h6>
+                                                <h6 class="card-subtitle mb-2 text-muted">2024 - 2026</h6>
                                                 <p class="card-text">Préparation du BTS Services Informatiques aux Organisations, option SISR (Solutions d’Infrastructure, Systèmes et Réseaux). Apprentissage de l’administration systèmes, réseaux et sécurité. Réorientation vers l’informatique.</p>
                                             </div>
                                         </div>
@@ -298,17 +308,17 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Me Contacter</h2>
-                    <div class="section-divider"></div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Me Contacter</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Une question ? Un projet ? N'hésitez pas à me contacter !</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="row">
+                    <!-- Contact Info Cards -->
+                    <div class="row mb-5">
                         <div class="col-md-4 mb-4">
-                            <div class="contact-info text-center">
+                            <div class="contact-info">
                                 <div class="contact-icon">
                                     <i class="bi bi-envelope-fill"></i>
                                 </div>
@@ -317,7 +327,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
-                            <div class="contact-info text-center">
+                            <div class="contact-info">
                                 <div class="contact-icon">
                                     <i class="bi bi-telephone-fill"></i>
                                 </div>
@@ -326,13 +336,57 @@
                             </div>
                         </div>
                         <div class="col-md-4 mb-4">
-                            <div class="contact-info text-center">
+                            <div class="contact-info">
                                 <div class="contact-icon">
                                     <i class="bi bi-geo-alt-fill"></i>
                                 </div>
                                 <h5>Localisation</h5>
                                 <p>Nice, France</p>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <h4 class="card-title text-center mb-4">Envoyer un message</h4>
+                            <form id="contactForm" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactName" class="form-label">Nom complet *</label>
+                                        <input type="text" class="form-control" id="contactName" name="name" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez entrer votre nom.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactEmail" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez entrer un email valide.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactSubject" class="form-label">Sujet *</label>
+                                    <input type="text" class="form-control" id="contactSubject" name="subject" required>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer un sujet.
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="contactMessage" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer votre message.
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-send"></i> Envoyer le message
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -368,6 +422,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Organic Bubbles Particle System -->
+    <script src="js/particles-modern.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>

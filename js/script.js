@@ -1,5 +1,136 @@
+// ============================================
+// THEME MANAGEMENT (Dark/Light Mode)
+// ============================================
+
+/**
+ * Initialize theme on page load
+ * Priority: 1. localStorage, 2. system preference, 3. light (default)
+ */
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.body.classList.add('dark-mode');
+        updateThemeIcon(true);
+    } else {
+        document.body.classList.remove('dark-mode');
+        updateThemeIcon(false);
+    }
+}
+
+/**
+ * Toggle between dark and light themes
+ */
+function toggleTheme() {
+    const isDark = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateThemeIcon(isDark);
+}
+
+/**
+ * Update theme toggle button icon
+ * @param {boolean} isDark - Whether dark mode is active
+ */
+function updateThemeIcon(isDark) {
+    const icon = document.querySelector('#theme-toggle i');
+    if (icon) {
+        icon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars';
+    }
+}
+
+/**
+ * Listen for system theme changes
+ */
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    // Only auto-update if user hasn't manually set preference
+    if (!localStorage.getItem('theme')) {
+        if (e.matches) {
+            document.body.classList.add('dark-mode');
+            updateThemeIcon(true);
+        } else {
+            document.body.classList.remove('dark-mode');
+            updateThemeIcon(false);
+        }
+    }
+});
+
+// Initialize theme BEFORE DOMContentLoaded to prevent flash
+initTheme();
+
+// ============================================
+// CONTACT FORM HANDLING
+// ============================================
+
+/**
+ * Handle contact form submission with validation
+ */
+function handleContactForm(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    
+    // Bootstrap validation
+    if (!form.checkValidity()) {
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+    }
+    
+    // Get form data
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+    };
+    
+    // Build mailto link
+    const mailtoLink = `mailto:bearsremi@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `Nom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    // Open mail client
+    window.location.href = mailtoLink;
+    
+    // Reset form after short delay (allows mailto to trigger first)
+    setTimeout(() => {
+        form.reset();
+        form.classList.remove('was-validated');
+        
+        // Show success feedback
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check-circle"></i> Message préparé !';
+        btn.classList.add('btn-success');
+        btn.classList.remove('btn-primary');
+        
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-primary');
+        }, 3000);
+    }, 500);
+}
+
+// ============================================
+// MAIN DOM CONTENT LOADED
+// ============================================
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Attach theme toggle listener
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // Attach contact form listener
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactForm);
+    }
+    
     // Get all nav links
     const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
     
@@ -101,35 +232,8 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
     
-    // Particle effect for hero section
-    createParticles();
+    // Particle system will be loaded from particles-modern.js
 });
-
-// Create floating particles for hero section
-function createParticles() {
-    const heroSection = document.querySelector('.hero-section');
-    if (!heroSection) return;
-    
-    for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        particle.style.cssText = `
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
-            animation-delay: ${Math.random() * 2}s;
-        `;
-        
-        heroSection.appendChild(particle);
-    }
-}
 
 // Form validation (for future contact form)
 function validateForm(form) {

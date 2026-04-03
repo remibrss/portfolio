@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0d1b2a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00b4d8"/>
+      <stop offset="100%" style="stop-color:#0077b6"/>
+    </linearGradient>
+    <linearGradient id="glpi" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c"/>
+      <stop offset="100%" style="stop-color:#c0392b"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)" rx="12"/>
+  
+  <!-- GLPI Dashboard Frame -->
+  <rect x="60" y="40" width="280" height="170" fill="#1a1a2e" rx="8" stroke="#00b4d8" stroke-width="2"/>
+  
+  <!-- Header Bar -->
+  <rect x="60" y="40" width="280" height="25" fill="#0d1117" rx="8"/>
+  <rect x="60" y="55" width="280" height="10" fill="#0d1117"/>
+  <circle cx="78" cy="52" r="5" fill="#e74c3c"/>
+  <circle cx="93" cy="52" r="5" fill="#f39c12"/>
+  <circle cx="108" cy="52" r="5" fill="#27ae60"/>
+  <text x="200" y="56" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">GLPI - Gestion Parc</text>
+  
+  <!-- Ticket List -->
+  <rect x="75" y="75" width="250" height="25" fill="#2d3436" rx="4"/>
+  <circle cx="90" cy="87" r="6" fill="#e74c3c"/>
+  <text x="105" y="91" font-family="Arial" font-size="9" fill="#fff">Ticket #1042 - PC ne démarre plus</text>
+  <text x="300" y="91" font-family="Arial" font-size="8" fill="#f39c12" text-anchor="end">Urgent</text>
+  
+  <rect x="75" y="105" width="250" height="25" fill="#2d3436" rx="4"/>
+  <circle cx="90" cy="117" r="6" fill="#f39c12"/>
+  <text x="105" y="121" font-family="Arial" font-size="9" fill="#fff">Ticket #1041 - Imprimante hors ligne</text>
+  <text x="300" y="121" font-family="Arial" font-size="8" fill="#3498db" text-anchor="end">Moyen</text>
+  
+  <rect x="75" y="135" width="250" height="25" fill="#2d3436" rx="4"/>
+  <circle cx="90" cy="147" r="6" fill="#27ae60"/>
+  <text x="105" y="151" font-family="Arial" font-size="9" fill="#fff">Ticket #1040 - Demande logiciel</text>
+  <text x="300" y="151" font-family="Arial" font-size="8" fill="#27ae60" text-anchor="end">Résolu</text>
+  
+  <!-- Stats Bar -->
+  <rect x="75" y="170" width="70" height="30" fill="#0d1117" rx="4"/>
+  <text x="110" y="182" font-family="Arial" font-size="8" fill="#aaa" text-anchor="middle">Ouverts</text>
+  <text x="110" y="195" font-family="Arial" font-size="12" fill="#e74c3c" text-anchor="middle" font-weight="bold">12</text>
+  
+  <rect x="155" y="170" width="70" height="30" fill="#0d1117" rx="4"/>
+  <text x="190" y="182" font-family="Arial" font-size="8" fill="#aaa" text-anchor="middle">En cours</text>
+  <text x="190" y="195" font-family="Arial" font-size="12" fill="#f39c12" text-anchor="middle" font-weight="bold">8</text>
+  
+  <rect x="235" y="170" width="70" height="30" fill="#0d1117" rx="4"/>
+  <text x="270" y="182" font-family="Arial" font-size="8" fill="#aaa" text-anchor="middle">Résolus</text>
+  <text x="270" y="195" font-family="Arial" font-size="12" fill="#27ae60" text-anchor="middle" font-weight="bold">156</text>
+  
+  <!-- Inventory Icon -->
+  <g transform="translate(320, 100)">
+    <rect x="0" y="0" width="35" height="45" fill="#2d3436" rx="3"/>
+    <rect x="5" y="8" width="25" height="3" fill="#00b4d8"/>
+    <rect x="5" y="15" width="25" height="3" fill="#00b4d8"/>
+    <rect x="5" y="22" width="25" height="3" fill="#00b4d8"/>
+    <rect x="5" y="29" width="15" height="3" fill="#00b4d8"/>
+    <text x="17" y="42" font-family="Arial" font-size="6" fill="#aaa" text-anchor="middle">INV</text>
+  </g>
+  
+  <!-- Icons Row - Below -->
+  <g transform="translate(80, 230)">
+    <circle cx="15" cy="10" r="12" fill="#e74c3c" opacity="0.3"/>
+    <text x="15" y="14" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">🎫</text>
+    <text x="15" y="35" font-family="Arial" font-size="7" fill="#aaa" text-anchor="middle">Tickets</text>
+  </g>
+  <g transform="translate(140, 230)">
+    <circle cx="15" cy="10" r="12" fill="#00b4d8" opacity="0.3"/>
+    <text x="15" y="14" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">💻</text>
+    <text x="15" y="35" font-family="Arial" font-size="7" fill="#aaa" text-anchor="middle">Inventaire</text>
+  </g>
+  <g transform="translate(200, 230)">
+    <circle cx="15" cy="10" r="12" fill="#f39c12" opacity="0.3"/>
+    <text x="15" y="14" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">📊</text>
+    <text x="15" y="35" font-family="Arial" font-size="7" fill="#aaa" text-anchor="middle">Stats</text>
+  </g>
+  <g transform="translate(260, 230)">
+    <circle cx="15" cy="10" r="12" fill="#27ae60" opacity="0.3"/>
+    <text x="15" y="14" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">👥</text>
+    <text x="15" y="35" font-family="Arial" font-size="7" fill="#aaa" text-anchor="middle">Users</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="11" fill="#aaa" text-anchor="middle">GLPI - Gestion Parc Informatique</text>
+</svg>

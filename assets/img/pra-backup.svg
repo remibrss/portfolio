@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0d1b2a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00b4d8"/>
+      <stop offset="100%" style="stop-color:#0077b6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)" rx="12"/>
+  
+  <!-- Central Server Rack -->
+  <rect x="160" y="40" width="80" height="110" fill="#2d3436" rx="4" stroke="#00b4d8" stroke-width="2"/>
+  <rect x="168" y="50" width="64" height="14" fill="#0d1117" rx="2"/>
+  <circle cx="222" cy="57" r="4" fill="#00ff00"/>
+  <rect x="168" y="70" width="64" height="14" fill="#0d1117" rx="2"/>
+  <circle cx="222" cy="77" r="4" fill="#00ff00"/>
+  <rect x="168" y="90" width="64" height="14" fill="#0d1117" rx="2"/>
+  <circle cx="222" cy="97" r="4" fill="#00b4d8"/>
+  <rect x="168" y="110" width="64" height="14" fill="#0d1117" rx="2"/>
+  <circle cx="222" cy="117" r="4" fill="#00ff00"/>
+  <rect x="168" y="130" width="64" height="14" fill="#0d1117" rx="2"/>
+  <circle cx="222" cy="137" r="4" fill="#00ff00"/>
+  
+  <!-- RPO Box -->
+  <rect x="45" y="60" width="80" height="55" fill="#1a1a2e" rx="6" stroke="#00b4d8" stroke-width="2"/>
+  <text x="85" y="85" font-family="Arial, sans-serif" font-size="14" fill="#00b4d8" text-anchor="middle" font-weight="bold">RPO</text>
+  <text x="85" y="105" font-family="Arial, sans-serif" font-size="18" fill="#f39c12" text-anchor="middle" font-weight="bold" font-style="italic">4h</text>
+  
+  <!-- RTO Box -->
+  <rect x="275" y="60" width="80" height="55" fill="#1a1a2e" rx="6" stroke="#f39c12" stroke-width="2"/>
+  <text x="315" y="85" font-family="Arial, sans-serif" font-size="14" fill="#f39c12" text-anchor="middle" font-weight="bold">RTO</text>
+  <text x="315" y="105" font-family="Arial, sans-serif" font-size="18" fill="#00ff00" text-anchor="middle" font-weight="bold" font-style="italic">2h</text>
+  
+  <!-- Backup Arrow -->
+  <polygon points="200,155 200,175 185,175 200,195 215,175 200,175" fill="url(#accent)"/>
+  
+  <!-- Backup Storage Box -->
+  <rect x="145" y="200" width="110" height="40" fill="#1a1a2e" rx="6" stroke="#f39c12" stroke-width="2"/>
+  <text x="200" y="226" font-family="Arial, sans-serif" font-size="14" fill="#f39c12" text-anchor="middle" font-weight="bold">BACKUP</text>
+  
+  <!-- Restore Arrow -->
+  <g transform="translate(300, 160)">
+    <polygon points="20,35 20,15 5,15 20,0 35,15 20,15" fill="#27ae60"/>
+    <text x="20" y="50" font-family="Arial, sans-serif" font-size="9" fill="#27ae60" text-anchor="middle">RESTORE</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="275" font-family="Arial, sans-serif" font-size="13" fill="#aaa" text-anchor="middle">Plan de Reprise d'Activité</text>
+</svg>

@@ -1,0 +1,276 @@
+/**
+ * Design Tokens — Portfolio BTS SIO SISR
+ * Système de variables CSS pour cohérence visuelle et mode nuit/jour
+ * 
+ * Structure:
+ * - Colors (light + dark themes)
+ * - Spacing (xs → xl)
+ * - Typography (scales, weights)
+ * - Transitions (speeds, easings)
+ * - Shadows & Effects
+ */
+
+/* ============================================
+   ROOT VARIABLES (Light Theme - Default)
+   ============================================ */
+:root {
+  /* === COLORS - Light Theme === */
+  /* Primary colors (gradient purple-blue) */
+  --color-primary: #667eea;
+  --color-primary-dark: #5568d3;
+  --color-primary-light: #7b93ff;
+  --color-secondary: #764ba2;
+  --color-accent: #ffc107;
+  --color-accent-hover: #ffb300;
+
+  /* Background colors */
+  --bg-body: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-hover: #f0f0f0;
+  
+  /* Text colors */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --text-inverse: #ffffff;
+  
+  /* Border colors */
+  --border-color: #e9ecef;
+  --border-color-dark: #dee2e6;
+  
+  /* Navbar */
+  --navbar-bg: #0d6efd;
+  --navbar-bg-scroll: rgba(13, 110, 253, 0.95);
+  --navbar-text: #ffffff;
+  
+  /* Hero section */
+  --hero-gradient-start: #667eea;
+  --hero-gradient-end: #764ba2;
+  --hero-overlay: rgba(0, 0, 0, 0.3);
+  --hero-height-full: 100vh;
+  --hero-height-short: 60vh;
+  
+  /* === SPACING SYSTEM === */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+  --spacing-2xl: 4rem;     /* 64px */
+  --spacing-3xl: 5rem;     /* 80px */
+  
+  /* Section spacing */
+  --section-padding-y: 5rem;
+  --section-padding-y-mobile: 3rem;
+  --section-header-margin: 3rem;
+  
+  /* === TYPOGRAPHY SCALE === */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Typography hierarchy */
+  --font-size-hero-title: 3.5rem;      /* 56px */
+  --font-size-section-title: 2.25rem;  /* 36px */
+  --font-size-card-title: 1.5rem;      /* 24px */
+  
+  /* === COMPONENT TOKENS === */
+  /* Cards */
+  --card-border-radius: 1rem;
+  --card-padding: 2rem;
+  --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  
+  /* Buttons */
+  --button-border-radius: 0.5rem;
+  --button-padding-x: 2rem;
+  --button-padding-y: 0.75rem;
+  
+  /* Inputs */
+  --input-border-radius: 0.5rem;
+  --input-padding: 0.75rem 1rem;
+  --input-border-width: 2px;
+  
+  /* Gradient divider */
+  --divider-gradient-start: #667eea;
+  --divider-gradient-end: #764ba2;
+
+  /* Particles (organic bubbles) */
+  --particle-color: rgba(255, 255, 255, 0.6);
+  --particle-glow: rgba(255, 255, 255, 0.3);
+  
+  /* === SPACING === */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  
+  /* === TYPOGRAPHY === */
+  --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Font sizes (fluid scale) */
+  --font-xs: 0.75rem;     /* 12px */
+  --font-sm: 0.875rem;    /* 14px */
+  --font-base: 1rem;      /* 16px */
+  --font-lg: 1.125rem;    /* 18px */
+  --font-xl: 1.25rem;     /* 20px */
+  --font-2xl: 1.5rem;     /* 24px */
+  --font-3xl: 2rem;       /* 32px */
+  --font-4xl: 2.5rem;     /* 40px */
+  
+  /* Font weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  
+  /* === TRANSITIONS === */
+  --transition-fast: 0.15s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  
+  /* Easing functions */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* === SHADOWS === */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* === BORDER RADIUS === */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;  /* Circle */
+  
+  /* === Z-INDEX LAYERS === */
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   DARK THEME
+   ============================================ */
+body.dark-mode {
+  /* === COLORS - Dark Theme === */
+  /* Keep primary colors similar but slightly muted */
+  --color-primary: #7b93ff;
+  --color-primary-dark: #667eea;
+  --color-primary-light: #8fa3ff;
+  --color-secondary: #9d7bc8;
+  --color-accent: #ffd54f;
+  --color-accent-hover: #ffc107;
+
+  /* Background colors - dark palette */
+  --bg-body: #1a1a1a;
+  --bg-light: #242424;
+  --bg-card: #2a2a2a;
+  --bg-hover: #333333;
+  
+  /* Text colors - inverted */
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-muted: #808080;
+  --text-inverse: #1a1a1a;
+  
+  /* Border colors */
+  --border-color: #3a3a3a;
+  --border-color-dark: #4a4a4a;
+  
+  /* Navbar - darker */
+  --navbar-bg: #1f1f1f;
+  --navbar-bg-scroll: rgba(31, 31, 31, 0.95);
+  --navbar-text: #e8e8e8;
+  
+  /* Hero section - darker gradient */
+  --hero-gradient-start: #3a4a7a;
+  --hero-gradient-end: #4a356a;
+  --hero-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Gradient divider */
+  --divider-gradient-start: #7b93ff;
+  --divider-gradient-end: #9d7bc8;
+
+  /* Particles - subtle glow in dark mode */
+  --particle-color: rgba(123, 147, 255, 0.4);
+  --particle-glow: rgba(123, 147, 255, 0.6);
+  
+  /* Shadows - stronger in dark mode */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+/* Usage in media queries:
+   - Mobile: < 576px
+   - Tablet: 576px - 991px
+   - Desktop: >= 992px
+   - Large: >= 1200px
+*/
+
+/* ============================================
+   SMOOTH THEME TRANSITIONS
+   ============================================ */
+body {
+  transition: 
+    background-color var(--transition-base) var(--ease-in-out),
+    color var(--transition-base) var(--ease-in-out);
+}
+
+/* Apply transitions to all theme-aware elements */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: var(--transition-base);
+  transition-timing-function: var(--ease-in-out);
+}
+
+/* Disable transitions for animations and transforms (preserve existing animations) */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.transition-fast { transition-duration: var(--transition-fast) !important; }
+.transition-base { transition-duration: var(--transition-base) !important; }
+.transition-slow { transition-duration: var(--transition-slow) !important; }
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }

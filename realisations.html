@@ -10,8 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Design Tokens (must load first) -->
+    <link rel="stylesheet" href="css/tokens.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Hero Fix (MUST load last) -->
+    <link rel="stylesheet" href="css/hero-fix.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -46,6 +50,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-light ms-2" aria-label="Toggle theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,11 +62,12 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
+        <div id="particles-js"></div>
         <div class="container">
-            <div class="row align-items-center" style="min-height: 60vh;">
+            <div class="row align-items-center" style="min-height: var(--hero-height-short);">
                 <div class="col-lg-12 text-center">
-                    <h1 class="display-4 fw-bold text-white mb-3">Mes Réalisations Professionnelles</h1>
-                    <p class="lead text-light mb-4">
+                    <h1 class="display-4 fw-bold mb-3 text-white">Mes Réalisations Professionnelles</h1>
+                    <p class="lead mb-0 text-white">
                         Découvrez mes projets et réalisations dans le domaine de l'infrastructure système et réseau
                     </p>
                 </div>
@@ -68,18 +78,87 @@
     <!-- Projects Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Projets Réalisés</h2>
-                    <div class="section-divider"></div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Projets Réalisés</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Découvrez mes réalisations concrètes en infrastructure système et réseau</p>
             </div>
-            <!-- Modèle de projet à personnaliser -->
+            <!-- Infrastructure Réseau Sécurisée -->
             <div class="row mb-5">
                 <div class="col-lg-6">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Titre du projet" class="img-fluid rounded shadow">
+                        <img src="assets/img/network-infra.svg" 
+                             alt="Infrastructure Réseau Sécurisée" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <h3 class="mb-3">
+                            <i class="bi bi-hdd-network text-primary"></i>
+                            Infrastructure Réseau Sécurisée
+                        </h3>
+                        <div class="mb-3">
+                            <span class="badge bg-info me-2">Cisco</span>
+                            <span class="badge bg-success me-2">VLAN</span>
+                            <span class="badge bg-warning text-dark me-2">802.1X</span>
+                            <span class="badge bg-danger">RADIUS</span>
+                        </div>
+                        <p class="mb-4">
+                            Conception et déploiement complet de l'infrastructure réseau du campus IRIS Nice. 
+                            Projet couvrant la segmentation VLAN (SISR/SLAM/Admin/Serveurs), le routage inter-VLAN 
+                            avec ACLs sur routeur Cisco 1941W, et la sécurisation Wi-Fi en WPA3-Enterprise 
+                            avec authentification 802.1X via serveur RADIUS.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> Segmentation VLAN et plan d'adressage IP</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Routage inter-VLAN avec ACLs documentées</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Authentification Wi-Fi nominative (802.1X/RADIUS)</li>
+                            <li><i class="bi bi-check-circle text-success"></i> PV de recette complet avec tests validés</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan de Reprise d'Activité -->
+            <div class="row mb-5 flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/img/pra-backup.svg" 
+                             alt="Plan de Reprise d'Activité" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <h3 class="mb-3">
+                            <i class="bi bi-arrow-repeat text-primary"></i>
+                            Plan de Reprise d'Activité (PRA)
+                        </h3>
+                        <div class="mb-3">
+                            <span class="badge bg-danger me-2">PRA</span>
+                            <span class="badge bg-warning text-dark me-2">RPO/RTO</span>
+                            <span class="badge bg-success me-2">Backup</span>
+                            <span class="badge bg-info">Active Directory</span>
+                        </div>
+                        <p class="mb-4">
+                            Conception et rédaction du Plan de Reprise d'Activité pour l'infrastructure critique 
+                            de l'école IRIS Nice : 15 VMs étudiants, Active Directory, services de supervision 
+                            et partages de fichiers. Définition des RPO/RTO par service, procédures de reprise 
+                            pas-à-pas et tests de restauration documentés avec PV.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> Inventaire des actifs par criticité</li>
+                            <li><i class="bi bi-check-circle text-success"></i> PRA complet : scénarios et procédures de reprise</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Tests de restauration VM et AD documentés</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Intégration alertes dans supervision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Classcord Server -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/img/classcord.png" 
+                             alt="Classcord Server" class="img-fluid rounded shadow">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -94,7 +173,7 @@
                             <span class="badge bg-warning text-dark">Sécurité</span>
                         </div>
                         <p class="mb-4">
-                            Réalisation d’un serveur de messagerie interne destiné à un environnement pédagogique. Le projet a couvert le déploiement, la sécurisation, l’automatisation et la documentation du service, avec une attention particulière à la fiabilité et à l’accessibilité en réseau local.
+                            Réalisation d'un serveur de messagerie interne destiné à un environnement pédagogique. Le projet a couvert le déploiement, la sécurisation, l'automatisation et la documentation du service, avec une attention particulière à la fiabilité et à l'accessibilité en réseau local.
                         </p>
                         <ul class="list-unstyled mb-4">
                             <li><i class="bi bi-check-circle text-success"></i> Approche complète du cycle de déploiement</li>
@@ -104,11 +183,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Nouveau projet Windows Server -->
+            <!-- Windows Server -->
             <div class="row mb-5 flex-row-reverse">
                 <div class="col-lg-6">
                     <div class="project-image">
-                        <img src="https://www.cozumpark.com/wp-content/uploads/2023/11/6545.png" 
+                        <img src="assets/img/6545.png" 
                              alt="Windows Server" class="img-fluid rounded shadow">
                     </div>
                 </div>
@@ -124,11 +203,109 @@
                             <span class="badge bg-warning text-dark">Sécurité</span>
                         </div>
                         <p class="mb-4">
-                            Mise en place et administration d’un serveur Windows Server pour la gestion d’un réseau d’entreprise. Projet comprenant l’installation d’Active Directory, la configuration des stratégies de groupe (GPO), la gestion des utilisateurs et la sécurisation de l’infrastructure.
+                            Mise en place et administration d'un serveur Windows Server pour la gestion d'un réseau d'entreprise. Projet comprenant l'installation d'Active Directory, la configuration des stratégies de groupe (GPO), la gestion des utilisateurs et la sécurisation de l'infrastructure.
                         </p>
                         <ul class="list-unstyled mb-4">
-                            <li><i class="bi bi-check-circle text-success"></i> Déploiement d’Active Directory</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Déploiement d'Active Directory</li>
                             <li><i class="bi bi-check-circle text-success"></i> Gestion centralisée des utilisateurs et ressources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Système de Sauvegardes -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/img/duplicati.jpg" 
+                             alt="Système de Sauvegardes" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <h3 class="mb-3">
+                            <i class="bi bi-shield-check text-primary"></i>
+                            Système de Sauvegardes
+                        </h3>
+                        <div class="mb-3">
+                            <span class="badge bg-success me-2">cron</span>
+                            <span class="badge bg-warning text-dark">Duplicati</span>
+                        </div>
+                        <p class="mb-4">
+                            Mise en place d'un système de sauvegardes automatisé sur un serveur Linux. Le projet a impliqué la configuration de scripts rsync pour la synchronisation des données, la planification via cron pour les sauvegardes régulières, et la sécurisation des accès pour protéger les données sensibles.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> Automatisation des sauvegardes avec cron</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Sécurisation et chiffrement des données via Duplicati</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet GLPI -->
+            <div class="row mb-5 flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/img/glpi-project.svg" 
+                             alt="Projet GLPI Gestion Parc" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <h3 class="mb-3">
+                            <i class="bi bi-pc-display-horizontal text-primary"></i>
+                            GLPI - Gestion du Parc Informatique
+                        </h3>
+                        <div class="mb-3">
+                            <span class="badge bg-danger me-2">GLPI</span>
+                            <span class="badge bg-primary me-2">Tickets</span>
+                            <span class="badge bg-success me-2">Inventaire</span>
+                            <span class="badge bg-warning text-dark">ITSM</span>
+                        </div>
+                        <p class="mb-4">
+                            Mise en place et administration de GLPI pour la gestion du parc informatique 
+                            de l'école. Projet couvrant la gestion des tickets d'incidents, l'inventaire 
+                            automatisé du matériel, et le suivi des demandes utilisateurs avec tableaux 
+                            de bord de supervision.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> Gestion des tickets incidents (création, suivi, résolution)</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Inventaire automatisé du parc informatique</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Catégorisation et priorisation des demandes</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Reporting et statistiques de support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Stage Actif Azur - Support Technique -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="project-image">
+                        <img src="assets/img/support-technique.svg" 
+                             alt="Stage Support Technique Actif Azur" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-content">
+                        <h3 class="mb-3">
+                            <i class="bi bi-tools text-primary"></i>
+                            Stage Actif Azur - Support Technique
+                        </h3>
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-2">Support N1/N2</span>
+                            <span class="badge bg-success me-2">Diagnostic</span>
+                            <span class="badge bg-warning text-dark me-2">Hardware</span>
+                            <span class="badge bg-info">Reconditionnement</span>
+                        </div>
+                        <p class="mb-4">
+                            Stage de 6 semaines chez Actif Azur, entreprise spécialisée dans le reconditionnement 
+                            et la revente de matériel informatique. Missions orientées support technique : diagnostic 
+                            de pannes matérielles sur postes fixes et portables, résolution d'incidents, 
+                            et préparation des équipements pour la mise en vente.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle text-success"></i> Diagnostic et résolution de pannes matérielles (PC fixes/portables)</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Tests de conformité et contrôle qualité avant revente</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Préparation et configuration des équipements</li>
+                            <li><i class="bi bi-check-circle text-success"></i> Gestion des incidents et suivi des interventions</li>
                         </ul>
                     </div>
                 </div>
@@ -136,6 +313,71 @@
         </div>
     </section>
 
+    <!-- Synthesis Table Section -->
+    <section class="py-5 bg-gradient-primary">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-white">Tableau de Synthèse BTS SIO</h2>
+                <div class="section-divider bg-warning"></div>
+                <p class="section-subtitle text-white">Aperçu complet de mes compétences et réalisations</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 feature-card" data-bs-toggle="modal" data-bs-target="#synthesisModal">
+                        <div class="card-body p-5 text-center">
+                            <div class="mb-4">
+                                <i class="bi bi-file-earmark-spreadsheet text-success" style="font-size: 4rem;"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Tableau de Synthèse des Compétences</h4>
+                            <p class="card-text text-muted mb-4">
+                                Cliquez pour visualiser l'ensemble de mes compétences, projets réalisés et preuves de maîtrise dans le cadre du BTS SIO SISR.
+                            </p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn btn-warning btn-lg">
+                                    <i class="bi bi-eye"></i> Aperçu
+                                </button>
+                                <a href="assets/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024 (1).xlsx" class="btn btn-success btn-lg" download onclick="event.stopPropagation();">
+                                    <i class="bi bi-download"></i> Télécharger Excel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Synthesis Table -->
+    <div class="modal fade" id="synthesisModal" tabindex="-1" aria-labelledby="synthesisModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="synthesisModalLabel">
+                        <i class="bi bi-file-earmark-spreadsheet me-2"></i>
+                        Tableau de Synthèse BTS SIO SISR
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="text-center p-3 modal-body-inner">
+                        <iframe src="assets/tableau-synthese.html" 
+                                style="width: 100%; height: 75vh; border: none; border-radius: 0.5rem;" 
+                                title="Aperçu Tableau de Synthèse">
+                        </iframe>
+                        <p class="text-muted mt-2 mb-0">
+                            <i class="bi bi-info-circle"></i> Version interactive HTML — Téléchargez le fichier Excel complet ci-dessous
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="assets/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024 (1).xlsx" class="btn btn-success" download>
+                        <i class="bi bi-download"></i> Télécharger Excel
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -143,11 +385,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h5>Remi BEARS</h5>
-                    <p>Étudiant BTS SIO SISR - Technicien Informatique</p>
-                    <!-- Lien PDF ajouté ci-dessous -->
+                    <p>Étudiant BTS SIO SISR - Administrateur Réseaux Junior</p>
                     <p>
-                        <a href="assets/tableau_de_synthese.pdf" target="_blank" class="text-warning text-decoration-underline">
-                            Voir mon tableau de synthèse
+                        <a href="assets/8 - BTS SIO - Annexe 8-1 - Tableau de synthèse - Epreuve E4 - BTS SIO 2024 (1).xlsx" download class="text-warning text-decoration-underline">
+                            Télécharger mon tableau de synthèse
                         </a>
                     </p>
                 </div>
@@ -171,6 +412,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Organic Bubbles Particle System -->
+    <script src="js/particles-modern.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>

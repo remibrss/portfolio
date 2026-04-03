@@ -1,0 +1,73 @@
+/**
+ * HERO SECTION FIX - Force White Text
+ * Loaded LAST to override everything (Bootstrap + tokens + style)
+ * Ultra-aggressive specificity to force white color
+ */
+
+/* Base hero section */
+section.hero-section {
+    color: #ffffff !important;
+}
+
+/* ALL text elements in hero - MAXIMUM SPECIFICITY */
+section.hero-section h1,
+section.hero-section h2,
+section.hero-section h3,
+section.hero-section h4,
+section.hero-section h5,
+section.hero-section h6 {
+    color: #ffffff !important;
+}
+
+section.hero-section p,
+section.hero-section div,
+section.hero-section .lead {
+    color: #ffffff !important;
+}
+
+/* Override ALL Bootstrap text utilities */
+section.hero-section .text-muted,
+section.hero-section .text-secondary,
+section.hero-section .text-dark,
+section.hero-section .text-body {
+    color: #ffffff !important;
+}
+
+/* Override Bootstrap display classes */
+section.hero-section .display-1,
+section.hero-section .display-2,
+section.hero-section .display-3,
+section.hero-section .display-4 {
+    color: #ffffff !important;
+}
+
+/* Dark mode override */
+body.dark-mode section.hero-section h1,
+body.dark-mode section.hero-section h2,
+body.dark-mode section.hero-section h3,
+body.dark-mode section.hero-section p,
+body.dark-mode section.hero-section .lead {
+    color: #ffffff !important;
+}
+
+/* EXCEPTIONS - Preserve accent colors */
+section.hero-section .text-warning,
+section.hero-section .text-warning span {
+    color: #ffc107 !important;
+}
+
+section.hero-section .btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+section.hero-section .btn-outline-light {
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+section.hero-section .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: #667eea !important;
+}
