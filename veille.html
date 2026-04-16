@@ -51,6 +51,11 @@
                         <a class="nav-link" href="index.html#contact">Contact</a>
                     </li>
                     <li class="nav-item">
+                        <a class="btn btn-outline-light ms-2" href="https://linkedin.com/in/remi-bears-a70263353" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <button id="theme-toggle" class="btn btn-outline-light ms-2" aria-label="Toggle theme">
                             <i class="bi bi-moon-stars"></i>
                         </button>
@@ -75,318 +80,159 @@
         </div>
     </section>
 
-    <!-- Démarche & Domaines de Veille Section -->
+    <!-- Intro & Problématique -->
     <section class="py-5 bg-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Ma Démarche de Veille</h2>
+                <h2 class="section-title">Intro & Problématique</h2>
                 <div class="section-divider"></div>
                 <p class="section-subtitle">
-                    En tant qu'étudiant en BTS SIO SISR, je maintiens une veille technologique constante 
-                    pour rester à jour sur les évolutions du domaine de l'infrastructure système et réseau.
-                </p>
-                <div class="row mt-4">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="alert alert-info border-start border-4 border-primary veille-methodology-box">
-                            <h5 class="alert-heading"><i class="bi bi-tools me-2"></i>Méthodologie & Outils</h5>
-                            <p class="mb-2">
-                                <strong><i class="bi bi-rss-fill text-warning me-2"></i>Feedly :</strong> 
-                                Agrégateur RSS pour centraliser les flux des sources spécialisées (blogs tech, sites officiels ANSSI, newsletters cybersécurité)
-                            </p>
-                            <p class="mb-0">
-                                <strong><i class="bi bi-journal-text text-primary me-2"></i>Notion :</strong> 
-                                Base de données personnalisée où je stocke, catégorise et analyse chaque article avec tags, résumés et liens vers sources
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <p class="section-subtitle mt-3">
-                    Voici les thématiques clés que je surveille pour anticiper les tendances du marché.
+                    Les ransomwares sont devenus une menace prioritaire pour les entreprises et les services publics.
+                    Ma problématique de veille est la suivante : <strong>comment limiter l'impact technique et économique d'une attaque ransomware</strong> ?
                 </p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-6">
                     <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-cloud"></i>
-                        </div>
-                        <h5>Virtualisation & Cloud</h5>
-                        <p>VMware, Hyper-V, Azure, AWS</p>
+                        <h4 class="mb-3"><i class="bi bi-1-circle-fill text-danger me-2"></i>Présenter le sujet : Ransomware</h4>
+                        <p class="text-muted mb-0">
+                            Un ransomware est un malware qui chiffre les fichiers d'une victime, bloque l'accès aux systèmes et exige une rançon.
+                            Le modèle <strong>RaaS (Ransomware-as-a-Service)</strong> a industrialisé cette menace en la rendant accessible à des attaquants moins experts.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-6">
                     <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-shield-lock"></i>
-                        </div>
-                        <h5>Sécurité Informatique</h5>
-                        <p>Zero Trust, Pentesting, Firewall</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
-                        <h5>Infrastructure Réseau</h5>
-                        <p>Cisco, VLANs, Routage avancé</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-gear-wide-connected"></i>
-                        </div>
-                        <h5>DevOps & Automation</h5>
-                        <p>Docker, Ansible, CI/CD</p>
+                        <h4 class="mb-3"><i class="bi bi-journal-check text-primary me-2"></i>Articles de veille utilisés</h4>
+                        <p class="mb-2">
+                            <a href="https://www.cisa.gov/stopransomware" target="_blank" rel="noopener noreferrer">
+                                CISA - StopRansomware (guide officiel de prévention et réponse)
+                            </a>
+                        </p>
+                        <p class="mb-2">
+                            <a href="https://www.enisa.europa.eu/publications/ransomware" target="_blank" rel="noopener noreferrer">
+                                ENISA - Ransomware (analyse et recommandations)
+                            </a>
+                        </p>
+                        <p class="mb-0">
+                            <a href="https://www.bbc.com/news/technology-39920141" target="_blank" rel="noopener noreferrer">
+                                BBC - WannaCry attack and global impact
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Articles de Veille Section -->
+    <!-- Développement -->
     <section class="py-5 bg-gradient-primary">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-white">Mes Articles de Veille</h2>
+                <h2 class="section-title text-white">Développement</h2>
                 <div class="section-divider bg-warning"></div>
-                <p class="section-subtitle text-white">Mes analyses technologiques approfondies</p>
-            </div>
-            <div class="row g-4">
-                <!-- Article Ransomware -->
-                <div class="col-lg-6">
-                    <div class="card shadow-lg border-0 feature-card h-100" onclick="window.open('https://gamma.app/docs/Comprendre-les-ransomwares-et-levolution-du-modele-RaaS-8jjcgwbuu02m9tg', '_blank')" style="cursor: pointer;">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 70px; height: 70px; background: linear-gradient(135deg, #dc3545 0%, #6f42c1 100%);">
-                                    <i class="bi bi-shield-exclamation text-white" style="font-size: 2rem;"></i>
-                                </div>
-                                <div class="ms-3">
-                                    <span class="badge bg-danger mb-1">Sécurité</span>
-                                    <div class="text-muted small"><i class="bi bi-calendar3 me-1"></i>14 Mars 2026</div>
-                                </div>
-                            </div>
-                            <h4 class="card-title mb-3">Comprendre les Ransomwares et le modèle RaaS</h4>
-                            <p class="card-text text-muted mb-3">
-                                Analyse approfondie des ransomwares et de l'évolution du modèle Ransomware-as-a-Service (RaaS). 
-                                Comment ces menaces se sont industrialisées et quelles sont les meilleures pratiques de protection.
-                            </p>
-                            <div class="mb-3">
-                                <span class="badge bg-danger me-1">Ransomware</span>
-                                <span class="badge bg-warning text-dark me-1">RaaS</span>
-                                <span class="badge bg-info me-1">Cybersécurité</span>
-                            </div>
-                            <button class="btn btn-danger">
-                                <i class="bi bi-eye me-2"></i>Consulter
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Article Virtualisation -->
-                <div class="col-lg-6">
-                    <div class="card shadow-lg border-0 feature-card h-100" onclick="window.open('https://gamma.app/docs/Virtualisation-Hyper-V-vs-VMware-ESXi-j2pxokiu8p1m379?mode=doc', '_blank')" style="cursor: pointer;">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);">
-                                    <i class="bi bi-hdd-stack text-white" style="font-size: 2rem;"></i>
-                                </div>
-                                <div class="ms-3">
-                                    <span class="badge bg-primary mb-1">Virtualisation</span>
-                                    <div class="text-muted small"><i class="bi bi-calendar3 me-1"></i>11 Juin 2024</div>
-                                </div>
-                            </div>
-                            <h4 class="card-title mb-3">VMware ESXi vs Microsoft Hyper-V</h4>
-                            <p class="card-text text-muted mb-3">
-                                Comparaison des deux solutions de virtualisation leaders du marché. Analyse des différences 
-                                en termes de performances, gestion, sécurité et coût pour choisir la bonne plateforme.
-                            </p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary me-1">Performances</span>
-                                <span class="badge bg-success me-1">Sécurité</span>
-                                <span class="badge bg-info me-1">Coût</span>
-                            </div>
-                            <button class="btn btn-warning">
-                                <i class="bi bi-eye me-2"></i>Consulter
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tendances & Analyse Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Tendances Observées</h2>
-                <div class="section-divider"></div>
-                <p class="section-subtitle">Les évolutions majeures qui impactent l'infrastructure système et réseau</p>
+                <p class="section-subtitle text-white">Approche technique, cas d'usage et impacts économiques</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="flex-shrink-0">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);">
-                                        <i class="bi bi-robot text-white fs-4"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Automatisation croissante</h5>
-                                </div>
-                            </div>
-                            <p class="text-muted">
-                                Les outils DevOps et l'infrastructure as code deviennent essentiels pour la gestion moderne des SI.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="flex-shrink-0">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);">
-                                        <i class="bi bi-shield-check text-white fs-4"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Sécurité renforcée</h5>
-                                </div>
-                            </div>
-                            <p class="text-muted">
-                                Zero Trust et sécurité par design sont désormais prioritaires face aux menaces croissantes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="flex-shrink-0">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);">
-                                        <i class="bi bi-cloud-arrow-up text-white fs-4"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Cloud hybride</h5>
-                                </div>
-                            </div>
-                            <p class="text-muted">
-                                Adoption massive des architectures multi-cloud pour plus de flexibilité et de résilience.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="flex-shrink-0">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);">
-                                        <i class="bi bi-cpu text-white fs-4"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Edge Computing</h5>
-                                </div>
-                            </div>
-                            <p class="text-muted">
-                                Traitement des données au plus près des utilisateurs pour réduire la latence.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mes Sources Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mes Sources de Veille</h2>
-                <div class="section-divider"></div>
-                <p class="section-subtitle">Les canaux que j'utilise pour rester informé des évolutions technologiques</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
                     <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                        <h5>Sites Web Officiels</h5>
-                        <p class="mb-2">Microsoft Docs • VMware Official</p>
-                        <p class="mb-0">Journal Du Net • TechRadar</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h5>Réseaux Sociaux</h5>
-                        <p class="mb-2">LinkedIn (Experts IT) • Twitter</p>
-                        <p class="mb-0">Reddit r/sysadmin • Discord</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-info h-100">
-                        <div class="contact-icon">
-                            <i class="bi bi-play-circle"></i>
-                        </div>
-                        <h5>Vidéos & Podcasts</h5>
-                        <p class="mb-2">YouTube (Chaînes tech)</p>
-                        <p class="mb-0">Security Now • Webinaires</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Formation Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="pe-lg-4">
-                        <h2 class="section-title text-start mb-4">Impact sur ma Formation</h2>
-                        <div class="section-divider" style="margin: 0 0 1.5rem 0;"></div>
-                        <p class="mb-4">
-                            Ces observations orientent mes choix de formation et projets personnels. 
-                            Je me concentre sur l'acquisition de compétences en automatisation, 
-                            sécurité avancée et technologies cloud pour rester compétitif sur le marché du travail.
-                        </p>
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                <strong>Automatisation :</strong> Ansible, Docker, scripts PowerShell
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                <strong>Sécurité :</strong> Analyse de vulnérabilités, durcissement système
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                <strong>Cloud :</strong> Azure, architectures hybrides, IaC
-                            </li>
+                        <h4 class="mb-3"><i class="bi bi-cpu-fill text-danger me-2"></i>Technique</h4>
+                        <ul class="mb-0 text-start">
+                            <li class="mb-2">Vecteurs fréquents : phishing, vulnérabilités non corrigées (ex: SMB), accès RDP exposés.</li>
+                            <li class="mb-2">Chaîne d'attaque : intrusion, élévation de privilèges, mouvement latéral, exfiltration, chiffrement.</li>
+                            <li class="mb-0">Contre-mesures : patch management, MFA, sauvegardes offline, segmentation réseau, EDR/SIEM.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card border-0 shadow-lg">
-                        <div class="card-body p-4 text-center">
-                            <i class="bi bi-graph-up-arrow text-primary" style="font-size: 4rem;"></i>
-                            <h4 class="mt-3 mb-3">Veille Continue</h4>
-                            <p class="text-muted mb-0">
-                                Une veille active me permet d'anticiper les besoins du marché 
-                                et d'adapter mes compétences en conséquence.
+                    <div class="contact-info h-100">
+                        <h4 class="mb-3"><i class="bi bi-cash-coin text-success me-2"></i>Économique</h4>
+                        <ul class="mb-0 text-start">
+                            <li class="mb-2">Pertes directes : interruption d'activité, restauration SI, prestataires externes.</li>
+                            <li class="mb-2">Pertes indirectes : image de marque, perte de confiance, impact juridique/compliance.</li>
+                            <li class="mb-0">La rançon n'assure jamais un retour complet à la normale.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="contact-info h-100">
+                        <h4 class="mb-3"><i class="bi bi-hospital-fill text-danger me-2"></i>Cas d'usage : WannaCry (2017)</h4>
+                        <p class="mb-2">
+                            WannaCry a exploité la vulnérabilité SMB (EternalBlue) et a touché massivement le <strong>NHS britannique</strong>.
+                            Résultat : services hospitaliers perturbés, rendez-vous annulés et indisponibilité de systèmes critiques.
+                        </p>
+                        <p class="mb-0 text-muted">
+                            Ce cas illustre un <strong>déni de service opérationnel</strong> et des <strong>pertes financières importantes</strong> sans même considérer l'impact humain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conclusion</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Les ransomwares combinent un risque technique et économique majeur.
+                    La meilleure stratégie reste la préparation : <strong>prévenir, détecter, segmenter, sauvegarder et tester la reprise</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ouverture -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4 p-lg-5 text-center">
+                            <h3 class="mb-3"><i class="bi bi-lightbulb-fill text-warning me-2"></i>Ouverture sur le futur</h3>
+                            <p class="mb-0">
+                                Dans le futur, on peut imaginer des campagnes ransomware plus automatisées (IA, double/triple extorsion).
+                                Les organisations devront renforcer la cyber-résilience via l'entraînement régulier aux incidents et l'automatisation de la réponse.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organisation de veille -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Organisation de veille</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-info h-100">
+                        <div class="contact-icon"><i class="bi bi-tools"></i></div>
+                        <h5>Outils</h5>
+                        <p class="mb-1"><strong>Feedly</strong> pour agréger les flux RSS</p>
+                        <p class="mb-0"><strong>Notion</strong> pour classer, résumer et taguer les articles</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info h-100">
+                        <div class="contact-icon"><i class="bi bi-calendar-week"></i></div>
+                        <h5>Fréquence</h5>
+                        <p class="mb-1">Collecte et analyse : 1 fois par semaine</p>
+                        <p class="mb-0">Mise à jour de la synthèse : 1 fois par semaine</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info h-100">
+                        <div class="contact-icon"><i class="bi bi-journal-richtext"></i></div>
+                        <h5>Sources</h5>
+                        <p class="mb-1">ANSSI, CERT-FR, CISA, blogs cybersécurité reconnus</p>
+                        <p class="mb-0">Cross-check systématique avec au moins une source institutionnelle</p>
                     </div>
                 </div>
             </div>
@@ -403,7 +249,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://linkedin.com/in/remi-bears-a70263353" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="text-white me-3"><i class="bi bi-github"></i></a>
                         <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
                         <a href="#" class="text-white"><i class="bi bi-envelope"></i></a>
