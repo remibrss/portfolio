@@ -1,0 +1,66 @@
+project_name: "portfolio"
+project_description: "Portfolio personnel pour la reussite du BTS SIO et la valorisation recrutement."
+domain: "portfolio-academique-et-professionnel"
+maturity_level: "development"
+target_audience:
+  - "moi"
+  - "jury_bts"
+goals:
+  - "Rendre le profil compréhensible en 30 secondes"
+  - "Mettre en avant competences puis projets lies aux criteres BTS"
+  - "Augmenter la coherence globale front + contenu"
+main_pain_point: "manque de coherence globale"
+root_cause_5_whys:
+  - "Manque de coherence globale"
+  - "Design modernisable, contenu incomplet, bugs d'animations JS"
+  - "Difficulte technique React/JS"
+  - "Animations mal organisees"
+  - "Absence de standards de composants"
+  - "Point de depart non clair"
+stack:
+  frontend:
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "React"
+  backend:
+    - "Node.js"
+actors:
+  - name: "owner"
+    type: "internal"
+    description: "Createur et mainteneur du portfolio"
+  - name: "jury_bts"
+    type: "external"
+    description: "Evaluateurs de l'epreuve BTS SIO"
+business_processes:
+  - name: "parcours_visiteur_prioritaire"
+    criticy: "high"
+    steps:
+      - "Arrivee sur le portfolio"
+      - "Comprendre le profil en moins de 30s"
+      - "Consulter competences"
+      - "Consulter projets avec criteres BTS"
+business_rules:
+  - id: "RG-PORT-001"
+    description: "Chaque projet doit lister les criteres BTS couverts."
+    priority: "critical"
+  - id: "RG-PORT-002"
+    description: "Chaque competence doit avoir au moins une preuve associee."
+    priority: "critical"
+glossaire:
+  presentation:
+    definition: "Section courte qui presente qui je suis, mon parcours et mes objectifs."
+  competences:
+    definition: "Capacites techniques, logicielles et soft skills avec niveau et preuves."
+  projets:
+    definition: "Realisations presentees avec contexte, actions, resultats et traces."
+  critere_bts:
+    definition: "Grille d'evaluation BTS rattachee explicitement a chaque projet."
+  veille_techno:
+    definition: "Suivi structure des evolutions techniques, ici axe ransomware."
+  credits_contacts:
+    definition: "Canaux de contact et credits de ressources, en footer et/ou page dediee."
+edge_cases:
+  - "Animations cassent la lisibilite sur mobile"
+  - "Projet sans preuve concrete"
+  - "Critere BTS mentionne mais non demontre"
